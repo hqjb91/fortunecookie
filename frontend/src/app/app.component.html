@@ -1,0 +1,15 @@
+<h1>Fortune Cookie</h1>
+
+<form [formGroup]="form" (ngSubmit)="processForm()">
+  <label for="numOfCookies">Number of Cookies</label>
+  <select formControlName="numOfCookies" id="numOfCookies" style="margin-right:2vw; margin-left:1vw">
+      <option value="{{r}}" *ngFor="let r of range">{{r}}</option>
+  </select>
+  <button type="submit">Set Cookies</button>
+</form>
+
+<hr>
+
+<ul>
+  <li *ngFor="let cookie of cookies">{{cookie.cookie}}</li>
+</ul>
